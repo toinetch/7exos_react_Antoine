@@ -1,0 +1,25 @@
+#total{
+    display: flex;
+}
+
+.grand{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 50px 0px 50px;
+}
+
+#carreG{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#carreD{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
