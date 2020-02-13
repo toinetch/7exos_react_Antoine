@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './exo4.css'
 
 const Exo4 = () => {
-    const [Display, setDisplay] = useState();
+    const [Display, setDisplay] = useState('block');
     var cpt = 0;
     var styleCarreG = {
         display: 'block'
