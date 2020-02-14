@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import './exo3.css';
 
 const Exo3 = () => {
     const [Name, setName] = useState('inconnu')
     return(
-        <div>
+        <div id='cadre'>
             <h1>Welcome <span id='span'>{Name}</span></h1>
             <p>Ecrivez dans l'input ci-dessous le nom de la personne que vous voulez accueillir</p>
             <p>lorsque vous cliquez sur le bouton "go" le nom que vous avez ajouté dans l'input sera alors mis dans le span du h2 et l'input sera alors vidé de tout contenu</p>
@@ -30,6 +31,9 @@ const Exo3 = () => {
                 if(text.value !== ''){
                     setName(span.innerHTML = text.value);
                     text.value = '';
+                    text.classList.remove('mauvais');
+                } else if(text.value === '') {
+                    text.classList.add('mauvais');
                 }
             }
         }

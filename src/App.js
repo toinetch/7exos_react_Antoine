@@ -14,13 +14,13 @@ function App() {
     <Router>
       <div className='App-header'>
         <ul id='navbar'>
-          <li><Link to='Exo1'>Exo 1</Link></li>
-          <li><Link to='Exo2'>Exo 2</Link></li>
-          <li><Link to='Exo3'>Exo 3</Link></li>
-          <li><Link to='Exo4'>Exo 4</Link></li>
-          <li><Link to='Exo5'>Exo 5</Link></li>
-          <li><Link to='Exo6'>Exo 6</Link></li>
-          <li><Link to='Exo7'>Exo 7</Link></li>
+          <li className='liens'><Link to='Exo1'>Exo 1</Link></li>
+          <li className='liens'><Link to='Exo2'>Exo 2</Link></li>
+          <li className='liens'><Link to='Exo3'>Exo 3</Link></li>
+          <li className='liens'><Link to='Exo4'>Exo 4</Link></li>
+          <li className='liens'><Link to='Exo5'>Exo 5</Link></li>
+          <li className='liens'><Link to='Exo6'>Exo 6</Link></li>
+          <li className='liens'><Link to='Exo7'>Exo 7</Link></li>
         </ul>
         <Switch>
           <Route path='/Exo1'><Exo1 /></Route>

@@ -5,12 +5,14 @@ const Exo5 = () => {
     const [Compte, setCompte] = useState(0);
     return(
         <>
-            <div>
-                <button onClick={() => ajouter()}>Ajouter</button>
-                <button onClick={() => supprimer()}>Supprimer</button>
-                <button onClick={() => reset()}><span id='compte'>{Compte}</span></button>
+            <div id='cadre'>
+                <div>
+                    <button className='button' onClick={() => ajouter()}>Ajouter</button>
+                    <button className='button' onClick={() => supprimer()}>Supprimer</button>
+                    <button className='button' onClick={() => reset()}><span id='compte'>{Compte}</span></button>
+                </div>
+                <div id='emplacement'></div>
             </div>
-            <div id='emplacement'></div>
         </>
     );
 
@@ -25,7 +27,7 @@ const Exo5 = () => {
     function supprimer() {
         if(document.getElementById('emplacement').lastChild){
             document.getElementById('emplacement').removeChild(document.getElementById('emplacement').lastChild);
-            setCompte(Compte-1);
+            setCompte(Compte-1); 
         }
     }
 
@@ -38,3 +40,4 @@ const Exo5 = () => {
 }
 
 export default Exo5;
+

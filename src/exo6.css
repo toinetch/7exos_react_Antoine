@@ -1,0 +1,35 @@
+#lvl1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lvl2{
+    width: 20%;
+    background-color: black;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+#result{
+    width: 99%;
+    text-align: end;
+}
+
+.chiffre{
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    margin: 10px;
+}
+
+#resultat{
+    margin: 5px 0 0 20px;
+}
+
+#taillemenu{
+    padding-bottom: 15px;
+}

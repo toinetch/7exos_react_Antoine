@@ -3,7 +3,8 @@ import './exo4.css'
 
 const Exo4 = () => {
     const [Display, setDisplay] = useState('block');
-    var cpt = 0;
+    const [Count, setCount] = useState(0);
+
     var styleCarreG = {
         display: 'block'
     }
@@ -12,19 +13,21 @@ const Exo4 = () => {
     }
     return(
         <>
-        <div id='total'>
-            <div className="grand">
-                <div id="carreG" style={styleCarreG}></div>
-            </div>
-            <div className="grand">
-                <div id="carreD" style={styleCarreD}></div>
-            </div>
-        </div>
+            <div id='cadre'>
+                <div id='total'>
+                    <div className="grand">
+                        <div id="carreG" style={styleCarreG}></div>
+                    </div>
+                    <div className="grand">
+                        <div id="carreD" style={styleCarreD}></div>
+                    </div>
+                </div>
 
-        <div>
-            <button onClick={() => changer()}>Le carré de <span id='fun'>gauche</span> est visible</button>
-            <button id='count' onClick={() => reset()}>{cpt}</button>
-        </div>
+                <div id='btn'>
+                    <button onClick={() => changer()}>Le carré de <span id='fun'>gauche</span> est visible</button>
+                    <button id='count' onClick={() => reset()}>{Count}</button>
+                </div>
+            </div>
         </>
     );
 
@@ -35,13 +38,13 @@ const Exo4 = () => {
             setDisplay(carreG.style.display = 'none');
             setDisplay(carreD.style.display = 'block');
             document.getElementById('fun').innerHTML = 'droite';
-            document.getElementById('count').innerHTML++;
+            setCount(Count + 1);
         }
         else if(carreD.style.display === 'block'){
             setDisplay(carreG.style.display = 'block');
             setDisplay(carreD.style.display = 'none');
             document.getElementById('fun').innerHTML = 'gauche';
-            document.getElementById('count').innerHTML++;
+            setCount(Count + 1);
         }
     }
 
@@ -51,7 +54,7 @@ const Exo4 = () => {
         carreG.style.display = 'block';
         carreD.style.display = 'none';
         document.getElementById('fun').innerHTML = 'gauche';
-        document.getElementById('count').innerHTML = 0;
+        setCount(0);
     }
 }
 

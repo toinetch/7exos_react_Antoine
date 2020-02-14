@@ -1,5 +1,6 @@
 #total{
     display: flex;
+    justify-content: center;
 }
 
 .grand{
@@ -22,4 +23,10 @@
     width: 100px;
     height: 100px;
     background-color: red;
+}
+
+#btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }

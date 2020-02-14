@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import './exo1.css';
 
 const Exo1 = () => {
+
+    useEffect(() => {
+        document.getElementById('titre').style.color = 'yellow';
+        document.getElementById('titre').style.backgroundColor = 'green';
+        return () => {
+            
+        };
+    }, [])
+
     return(
-        <div>
-            <h1 id='titre' style={{color: 'yellow', backgroundColor: 'green'}}>Mon titre modifié</h1>
+        <div id='cadre'>
+            <h1 id='titre'>Mon titre modifié</h1>
             <p>Liste de propriétés</p>
             <ul>
                 <li>InnerText</li>
