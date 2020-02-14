@@ -6,10 +6,10 @@ const Exo4 = () => {
     const [Count, setCount] = useState(0);
 
     var styleCarreG = {
-        display: 'block'
+        display: 'block',
     }
     var styleCarreD = {
-        display: 'none'
+        display: 'none',
     }
     return(
         <>

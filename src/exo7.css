@@ -1,0 +1,40 @@
+#cadrre{
+    background-color: slateblue;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+#nouveau{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+.mauvais{
+    border: red solid 5px;
+}
+
+#divi{
+    width: 60%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border: white solid 1px;
+    padding-left: 100px;
+}
+
+#para{
+    margin: 0;
+}
+
+.bout{
+    height: 50%;
+    margin: auto;
+}
+
+.cache{
+    display: none;
+}

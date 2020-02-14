@@ -3,9 +3,7 @@ import './exo6.css';
 
 const Exo6 = () => {
     const [num, setNum] = useState("");
-
-
-
+    
     return(
         <>
             <div id='cadre'>
@@ -82,6 +80,8 @@ const Exo6 = () => {
             case "/":
                 totale = parseInt(nb1.value) / parseInt(nb2.value);
                 break;
+            default:
+                break;
         }
         result.innerHTML = totale;
     }
@@ -100,4 +100,3 @@ const Exo6 = () => {
 }
 
 export default Exo6;
-
