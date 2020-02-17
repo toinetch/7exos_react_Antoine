@@ -38,3 +38,33 @@
 .cache{
     display: none;
 }
+
+.btnToDoList{
+    height: 30px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 30px;
+}
+
+.bg {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid white;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.valide{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid white;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 25px;
+    background-color: green;
+}

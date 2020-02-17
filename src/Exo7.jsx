@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './exo7.css';
 
 const Exo7 = () => {
+    const [fait, setFait] = useState();
+    const [aFaire, setaFaire] = useState();
+    const [tout, setTout] = useState();
 
     return(
         <>
             <div id='cadrre'>
                 <h3>To do list</h3>
                 <input id='nouveau' type="text" onKeyPress={() => entree()}/>
+                <div id="div71">
+            <button className="btnToDoList" id="btnTous" onClick={() => tous()}>Toutes</button>
+            <button className="btnToDoList" id="btnComplet" onClick={() => complet()}>Complétées</button>
+            <button className="btnToDoList" id="btnAfaire" onClick={() => afaire()}>A faire</button>
+        </div>
                 <div id='place'></div>
             </div>
         </>
@@ -21,7 +29,25 @@ const Exo7 = () => {
 
                     let divi = document.createElement('div');
                     divi.id = 'divi';
+                    divi.classList.add('bg');
                     place.appendChild(divi);
+
+                    let btn = document.createElement('input');
+                    btn.type = 'checkbox';
+                    btn.id = 'check';
+                    divi.appendChild(btn);
+                    btn.onclick = function checkColor(e){
+                        if (e.target.checked === true){
+                            e.target.parentElement.classList.add('valide');
+                            e.target.parentElement.classList.remove('bg');
+                            e.target.parentElement.classList.add('val');
+                        }
+                        else{
+                            e.target.parentElement.classList.add('bg');
+                            e.target.parentElement.classList.remove('valide');
+                            e.target.parentElement.classList.remove('val');
+                        }
+                    };
 
                     let para = document.createElement('p');
                     para.id = 'para';
@@ -69,6 +95,42 @@ const Exo7 = () => {
                     document.getElementById('nouveau').placeholder = 'Entrez au moins 1 caractere';
                 }
             }
+        }
+    }
+
+    function afaire() {
+        let x, i, y;
+        y = document.getElementsByClassName('valide');
+        x = document.getElementsByClassName('bg');
+        for(i = 0; i < x.length; i++){
+            x[i].style.display = 'flex';
+        }
+        for(i = 0; i < y.length; i++){
+            y[i].style.display = 'none';
+        }
+    }
+
+    function tous() {
+        let x, i, y;
+        y = document.getElementsByClassName('valide');
+        x = document.getElementsByClassName('bg');
+        for(i = 0; i < x.length; i++){
+            x[i].style.display = 'flex';
+        }
+        for(i = 0; i < y.length; i++){
+            y[i].style.display = 'flex';
+        }
+    }
+
+    function complet() {
+        let x, i, y;
+        y = document.getElementsByClassName('valide');
+        x = document.getElementsByClassName('bg');
+        for(i = 0; i < x.length; i++){
+            x[i].style.display = 'none';
+        }
+        for(i = 0; i < y.length; i++){
+            y[i].style.display = 'flex';
         }
     }
 }
